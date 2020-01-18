@@ -14,7 +14,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>OpenKJ Settings</string>
+   <string>CLOUDnine Settings</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_24">
    <item>
@@ -34,7 +34,7 @@
         <item>
          <widget class="QTabWidget" name="tabWidgetMain">
           <property name="currentIndex">
-           <number>6</number>
+           <number>3</number>
           </property>
           <widget class="QWidget" name="tabWidgetPage1">
            <attribute name="title">
@@ -1221,6 +1221,15 @@ QPushButton:default {
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
+                <property name="font">
+                 <font>
+                  <family>Corbel</family>
+                  <pointsize>11</pointsize>
+                 </font>
+                </property>
+                <property name="currentText">
+                 <string>Corbel</string>
+                </property>
                </widget>
               </item>
               <item>
@@ -1239,13 +1248,13 @@ QPushButton:default {
                  <string/>
                 </property>
                 <property name="minimum">
-                 <number>8</number>
+                 <number>11</number>
                 </property>
                 <property name="maximum">
                  <number>40</number>
                 </property>
                 <property name="value">
-                 <number>12</number>
+                 <number>11</number>
                 </property>
                </widget>
               </item>
