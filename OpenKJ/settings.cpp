@@ -263,9 +263,9 @@ Settings::Settings(QObject *parent) :
     QObject(parent)
 {
 
-    QCoreApplication::setOrganizationName("OpenKJ");
-    QCoreApplication::setOrganizationDomain("OpenKJ.org");
-    QCoreApplication::setApplicationName("OpenKJ");
+    QCoreApplication::setOrganizationName("CLOUDnine");
+    QCoreApplication::setOrganizationDomain("CLOUDnine.org");
+    QCoreApplication::setApplicationName("CLOUDnine");
     settings = new QSettings(this);
 }
 

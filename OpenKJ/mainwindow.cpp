@@ -2807,8 +2807,8 @@ void MainWindow::on_actionAbout_triggered()
     QString title;
     QString text;
     QString date = QString::fromLocal8Bit(__DATE__) + " " + QString(__TIME__);
-    title = "About OpenKJ";
-    text = "OpenKJ\n\nVersion: " + QString(OKJ_VERSION_STRING) + " " + QString(OKJ_VERSION_BRANCH) + "\nBuilt: " + date + "\nLicense: GPL v3+";
+    title = "About CLOUDnine";
+    text = "CLOUDnine\n\nVersion: " + QString(OKJ_VERSION_STRING) + " " + QString(OKJ_VERSION_BRANCH) + "\nBuilt: " + date + "\nLicense: GPL v3+";
     QMessageBox::about(this,title,text);
 }
 

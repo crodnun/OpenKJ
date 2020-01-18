@@ -34,7 +34,7 @@
         <item>
          <widget class="QTabWidget" name="tabWidgetMain">
           <property name="currentIndex">
-           <number>0</number>
+           <number>6</number>
           </property>
           <widget class="QWidget" name="tabWidgetPage1">
            <attribute name="title">
@@ -44,7 +44,7 @@
             <item>
              <widget class="QTabWidget" name="tabWidget">
               <property name="currentIndex">
-               <number>0</number>
+               <number>1</number>
               </property>
               <widget class="QWidget" name="tabKaraoke">
                <attribute name="title">
@@ -204,7 +204,7 @@
               </widget>
               <widget class="QWidget" name="tabBreakMusic">
                <attribute name="title">
-                <string>Break Music</string>
+                <string>Mistari</string>
                </attribute>
                <layout class="QVBoxLayout" name="verticalLayout_14">
                 <item>

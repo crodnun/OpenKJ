@@ -128,7 +128,7 @@ AudioBackendGstreamer::AudioBackendGstreamer(bool loadPitchShift, QObject *paren
         }
 //        videoSink = gst_element_factory_make ("xvimagesink", NULL);
 //        videoSink2 = gst_element_factory_make("xvimagesink", NULL);
-#elif Q_OS_WIN
+#elseif Q_OS_WIN
         videoSink = gst_element_factory_make ("d3dvideosink", NULL);
         videoSink2 = gst_element_factory_make("d3dvideosink", NULL);
 #else

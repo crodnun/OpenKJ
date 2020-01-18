@@ -7,6 +7,7 @@
 QT += core gui sql network widgets multimedia concurrent svg printsupport
 
 unix:DISTVER = $$system(cat /etc/os-release |grep VERSION_ID |cut -d'=' -f2 | sed -e \'s/^\"//\' -e \'s/\"$//\')
+win32: DISTVER = 1.0.0
 message($$DISTVER)
 
 unix:!macx {
@@ -35,7 +36,7 @@ unix:!macx {
 macx: {
     LIBS += -F/Library/Frameworks -framework GStreamer
     INCLUDEPATH += /Library/Frameworks/GStreamer.framework/Headers
-    ICON = Icons/OpenKJ.icns
+    ICON =
     DEFINES += STATIC_TAGLIB
     DEFINES += MACPLATFORM
 }
@@ -43,21 +44,23 @@ macx: {
 win32 {
     ## Windows common build here
     DEFINES += STATIC_TAGLIB
-    RC_ICONS = Icons/okjicon.ico
+    RC_ICONS = Icons/cloudnine.ico
     !contains(QMAKE_TARGET.arch, x86_64) {
         ## Windows x86 (32bit) specific build here
         INCLUDEPATH += C:\gstreamer\1.0\x86\include\gstreamer-1.0
         INCLUDEPATH += C:\gstreamer\1.0\x86\include\glib-2.0
         INCLUDEPATH += C:\gstreamer\1.0\x86\lib\glib-2.0\include
         INCLUDEPATH += C:\gstreamer\1.0\x86\include\glib-2.0\gobject
-        LIBS += -LC:\gstreamer\1.0\x86\lib -lgstreamer-1.0 -lglib-2.0 -lgobject-2.0 -lgstapp-1.0 -lgstaudio-1.0 -lgstpbutils-1.0 -lgstcontroller-1.0 -lgstvideo-1.0 -lwinmm -lgstbadvideo-1.0
+        ## LIBS += -LC:\gstreamer\1.0\x86\lib -lgstreamer-1.0 -lglib-2.0 -lgobject-2.0 -lgstapp-1.0 -lgstaudio-1.0 -lgstpbutils-1.0 -lgstcontroller-1.0 -lgstvideo-1.0 -lwinmm -lgstbadvideo-1.0
+        LIBS += -LC:\gstreamer\1.0\x86\lib -lgstreamer-1.0 -lglib-2.0 -lgobject-2.0 -lgstapp-1.0 -lgstaudio-1.0 -lgstpbutils-1.0 -lgstcontroller-1.0 -lgstvideo-1.0 -lwinmm
     } else {
         ## Windows x64 (64bit) specific build here
         INCLUDEPATH += C:\gstreamer\1.0\x86_64\include\gstreamer-1.0
         INCLUDEPATH += C:\gstreamer\1.0\x86_64\include\glib-2.0
         INCLUDEPATH += C:\gstreamer\1.0\x86_64\lib\glib-2.0\include
         INCLUDEPATH += C:\gstreamer\1.0\x86_64\include\glib-2.0\gobject
-        LIBS += -LC:\gstreamer\1.0\x86_64\lib -lgstreamer-1.0 -lglib-2.0 -lgobject-2.0 -lgstapp-1.0 -lgstaudio-1.0 -lgstpbutils-1.0 -lgstcontroller-1.0 -lgstvideo-1.0 -lwinmm -lgstbadvideo-1.0
+        ## LIBS += -LC:\gstreamer\1.0\x86_64\lib -lgstreamer-1.0 -lglib-2.0 -lgobject-2.0 -lgstapp-1.0 -lgstaudio-1.0 -lgstpbutils-1.0 -lgstcontroller-1.0 -lgstvideo-1.0 -lwinmm -lgstbadvideo-1.0
+        LIBS += -LC:\gstreamer\1.0\x86_64\lib -lgstreamer-1.0 -lglib-2.0 -lgobject-2.0 -lgstapp-1.0 -lgstaudio-1.0 -lgstpbutils-1.0 -lgstcontroller-1.0 -lgstvideo-1.0 -lwinmm
     }
 }
 
@@ -65,7 +68,7 @@ contains(DEFINES, USE_GL) {
     QT += opengl
 }
 
-TARGET = OpenKJ 
+TARGET = CLOUDnine
 TEMPLATE = app
 
 contains(DEFINES, STATIC_TAGLIB) {

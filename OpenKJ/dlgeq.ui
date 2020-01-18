@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>674</width>
+    <width>824</width>
     <height>266</height>
    </rect>
   </property>
@@ -749,7 +749,7 @@
      <item>
       <widget class="QGroupBox" name="groupBox_5">
        <property name="title">
-        <string>Break Music EQ</string>
+        <string>Mistari EQ</string>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_23">
         <item>
